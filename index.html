@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="utf-8">
+</head>
+<body>
+
+<div class="modal" id="user-modal">
+    <div class="modal-content">
+        <span class="close">x</span>
+        <h2>Создать пользователя</h2>
+        <form action="#" method="post">
+            <label for="user-full-name">ФИО:</label>
+            <input type="text" id="user-full-name" name="user-full-name" required>
+
+            <label for="user-phone">Телефон:</label>
+            <input type="tel" id="user-phone" name="user-phone" required>
+
+            <label for="user-email">Email:</label>
+            <input type="email" id="user-email" name="user-email" required>
+
+            <label for="user-login">Логин:</label>
+            <input type="text" id="user-login" name="user-login" required>
+
+            <label for="user-password">Пароль:</label>
+            <input type="password" id="user-password" name="user-password" required>
+
+            <label for="user-group">Группа пользователя</label>
+            <select id="user-group" name="user-group" required>
+                <option value="">Выберите группу</option>
+                <option value="admin">Администратор</option>
+                <option value="user">Пользователь</option>
+            </select>
+
+            <input type="submit" value="Создать"/> 
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <div class="header">
+        <ul class="menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a id="open-create-user">Создать пользователя</li>
+        </ul>
+    </div>
+
+    <div class="slider" id="slider">
+        <div><img src="/img/1.jpg"></div>
+        <div><img src="/img/2.jpg"></div>
+        <div><img src="/img/3.png"></div>        
+    </div>
+
+    <div class="news-container">
+        <div class="news-item">
+            <img src="https://backend.learn.maxima.school/files/ebb3a325-0974-4c80-a3a8-6233af42488a.png" alt="Новость 1">
+            <h3>Что спросить джуну — рекомендация от senior-разработчика</h3>
+            <p>Как джуны проходят через свою первую работу? Как встраиваются в рабочие процессы, если за спиной пока только первое успешное собеседование?</p>
+            <a href="#" class="read-more">Подробнее</a>
+        </div>
+
+        <div class="news-item">
+            <img src="https://backend.learn.maxima.school/files/0da608e0-229a-4c41-83d1-cd174b6a8d75.webp" alt="Новость 2">
+            <h3>Как выбрать язык программирования?</h3>
+            <p>Даже после того, как вы определились, с какой областью программирования вы хотите работать, выбор языка может оказаться неожиданно трудным.</p>
+            <a href="#" class="read-more">Подробнее</a>
+        </div>
+
+        <div class="news-item">
+            <img src="https://backend.learn.maxima.school/files/4a1c6fc7-f2ad-44c2-bfd2-3ad0b36eb661.png" alt="Новость 3">
+            <h3>Подборка IT-компаний, куда можно пойти, чтобы работать с космосом</h3>
+            <p>Работать в космической отрасли со специализацией в IT — можно. Более того, многие компании в космической отрасли постоянно ищут IT-специалистов.</p>
+            <a href="#" class="read-more">Подробнее</a>
+        </div>
+
+        <div class="news-item">
+            <img src="https://backend.learn.maxima.school/files/a382fcaa-1599-447d-818c-170bbb2b2607.png" alt="Новость 4">
+            <h3>Что точно стоит убрать из своего резюме и профиля на хедхантере?</h3>
+            <p>Ваше резюме и профиль на сайтах для поиска работы — это первое, что увидит работодатель, поэтому важно внимательно подойти к его составлению.</p>
+            <a href="#" class="read-more">Подробнее</a>
+        </div>
+
+        <div class="news-item">
+            <img src="https://backend.learn.maxima.school/files/2245849a-2a00-4e0f-b374-b6532acaed76.png" alt="Новость 5">
+            <h3>Как оформить профиль на LinkedIn?</h3>
+            <p>LinkedIn — одна из самых популярных профессиональных социальных сетей в мире. В IT-сфере LinkedIn служит инструментом для поиска контактов.</p>
+            <a href="#" class="read-more">Подробнее</a>
+        </div>
+
+        <div class="news-item">
+            <img src="https://backend.learn.maxima.school/files/7b0c83e9-f3e3-412e-a10e-c3a2cbbfc0ff.png" alt="Новость 6">
+            <h3>Что такое пробные собеседования и где их проходить?</h3>
+            <p>Собеседования, особенно впервые в новой специальности, это волнительно.</p>
+            <a href="#" class="read-more">Подробнее</a>
+        </div>
+    </div>
+
+    <div class="feedback-form">
+        <h2>Обратная связь</h2>
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Ваша почта</label>
+        <input type="name" id="email" required>
+
+        <label for="message">Задайте нам вопрос</label>
+        <textarea id="message" required></textarea>
+        
+        <div class="feedback-form-btn">
+            <button onclick="addAsk()">Отправить</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        &copy; 2023. Все права защищены.
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $('#slider').slick({
+        Infinity: true,
+        prevArrow: '<div class="slick-btn-own slick-prev">❮</div>',
+        nextArrow: '<div class="slick-btn-own slick-next">❯</div>',
+    });
+
+    $(document).ready(function() {
+        $("#open-create-user").click(function() {
+            $("#user-modal").fadeIn(200);
+        });
+
+        $(".close").click(function() {
+            $("#user-modal").fadeOut(200);
+        });
+    });
+</script>
+</body>
+</html>
